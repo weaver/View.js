@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inputs Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/inputs.css" />
+  </head>
+  <body>
+    <form>
+      <div class="demo">
+	<p class="view">
+	  <label for="bool-view">View:</label>
+	  <span id="bool-view" name="truth" role="boolcheck" aria-checked="true"></span>
+	</p>
+	<p class="native">
+	  <label for="bool-native">Native:</label>
+	  <input id="bool-native" type="checkbox" />
+	</p>
+      </div>
+
+      <div class="demo">
+	<p class="view">
+	  <label for="select-view">View:</label>
+	  <span id="select-view" name="choose" role="select" data-value="c">
+	    <span class="option" data-value="a">A</span>
+	    <span class="option" data-value="b">B</span>
+	    <span class="option" data-value="c">This is a Really Long label.</span>
+	  </span>
+	</p>
+	<p class="native">
+	  <label for="select-native">Native:</label>
+	  <select id="select-native">
+	    <option value="a">A</option>
+	    <option value="b">B</option>
+	    <option value="c">This is a Really Long label.</option>
+	  </select>
+	</p>
+      </div>
+
+    </form>
+    <pre id="value"></pre>
+    <script data-main="inputs" src="js/require-jquery-1.4.4.js"></script>
+  </body>
+</html>

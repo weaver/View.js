@@ -1,0 +1,98 @@
+@import url(demo.css);
+
+/* ## Basic Dialog ## */
+
+[role="dialog"] {
+    position: absolute;
+}
+
+[role="dialog"] > .buttons {
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+[role="modal"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 10000;
+}
+
+[role="modal"].active {
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #dcdcdc;
+    opacity: 0.65;
+}
+
+[role="modal"] [role="dialog"] {
+    position: relative;
+    width: auto;
+}
+
+/* ## Theme ## */
+
+[role="modal"] {
+    opacity: 0;
+    -webkit-transition: visibility 0.1s linear, opacity 0.1s linear;
+}
+
+    [role="modal"].active {
+        opacity: 1;
+    }
+
+.textbox [role="dialog"] {
+    width: 350px;
+    padding: 10px;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 10px #ccc;
+}
+
+.textbox [role="dialog"] > .buttons > .dialog-close {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    padding: 0px 6px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+    .textbox [role="dialog"] > .buttons > .dialog-close:hover {
+	background-color: #444;
+    }
+
+.textbox h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+/* ## Bootstrap ## */
+
+body > .buttons {
+    padding-top: 30%;
+    text-align: center;
+}
+
+#demo {
+    display: none;
+}
+
+.dialog-content > #demo {
+    display: block;
+}
+

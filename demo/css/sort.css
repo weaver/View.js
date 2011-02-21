@@ -1,0 +1,111 @@
+@import url(demo.css);
+
+#demo {
+    position: relative; top: 100px; left: 0;
+    background-color: #eee;
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+
+/* ## Controls ## */
+
+input[type="button"], input[type="submit"] {
+    padding: 0 6px;
+}
+
+form {
+    margin-bottom: 5px;
+}
+
+.fields {
+    display: inline-block;
+    width: 255px;
+    padding: 0 5px;
+}
+
+.fields input {
+    width: 100%;
+}
+
+form .buttons {
+    display: inline-block;
+}
+
+
+/* ## Sortable ## */
+
+[role="sortable"] {
+    visibility: hidden;
+}
+
+    [role="sortable"].initialized {
+        visibility: visible;
+    }
+
+    [role="sortable"] > .dragging {
+        opacity: .5;
+    }
+
+    [role="sortable"] > .droppable.delta, [role="sortable"] > .droppable.delta {
+        background-color: yellow;
+    }
+
+
+/* ## Theme ## */
+
+[role="sortable"] {
+    margin-bottom: 5px;
+}
+
+.item {
+    position: relative;
+    width: 290px;
+    padding: 3px 5px;
+    margin: 5px 0;
+    cursor: move;
+    background-color: #ccc;
+}
+
+.active > .item {
+    visibility: visible;
+}
+
+.item a {
+    display: inline-block;
+    width: 255px;
+    margin-right: 5px;
+    cursor: move;
+    overflow: hidden;
+}
+
+.item .buttons {
+    display: inline-block;
+}
+
+.indicator {
+    position: absolute; left: 0;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: yellow;
+    visibility: hidden;
+}
+
+.drop > .indicator {
+   visibility: visible;
+}
+
+.drop.before > .indicator {
+    top: -5px;
+}
+
+.drop.after > .indicator {
+    bottom: -5px;
+}
+
+.changed {
+    background-color: yellow;
+}
+

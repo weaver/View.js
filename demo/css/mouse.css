@@ -1,0 +1,15 @@
+@import url(demo.css);
+
+#demo {
+    position: relative; top: 100px; left: 0;
+    width: 300px; height: 200px;
+    background-color: #eee;
+    margin: 0 auto;
+}
+
+#drag {
+    position: absolute; top: 0; left: 0;
+    width: 50px; height: 50px;
+    background-color: red;
+    cursor: move;
+}

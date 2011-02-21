@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sort Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/sort.css" />
+  </head>
+  <body>
+    <div id="demo">
+      <form method="post" action="#" role="form">
+	<div class="fields">
+	  <input name="value" type="text" value="" />
+	</div>
+	<div class="buttons">
+	  <input type="submit" value="+" />
+	</div>
+      </form>
+      <ul role="sortable">
+	<li class="item">
+	  <a href="#">${value}</a>
+	  <span class="buttons"><input type="button" value="x" class="remove" /></span>
+	</li>
+      </ul>
+    </div>
+    <script data-main="sort" src="js/require-jquery-1.4.4.js"></script>
+  </body>
+</html>

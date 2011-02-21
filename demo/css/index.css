@@ -1,0 +1,19 @@
+@import url(demo.css);
+
+body { padding: 1em; }
+
+h1, h2 { color: black; margin-bottom: 0.5em; }
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.2em; }
+
+h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p { margin-bottom: 0.2em; }
+
+section {
+    margin-bottom: 2em;
+}

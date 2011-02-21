@@ -1,0 +1,159 @@
+@import url(demo.css);
+
+body {
+    padding-top: 100px;
+}
+
+#value, .demo {
+    width: 300px;
+    background-color: #eee;
+    margin: 0 auto 50px auto;
+    padding: 25px;
+}
+
+.view, .native {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+label {
+    font-size: 12px;
+}
+
+select {
+    max-width: 50px;
+}
+
+
+/* ## Modal ## */
+
+[role="modal"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 10000;
+}
+
+[role="modal"].active {
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #dcdcdc;
+    opacity: 0.65;
+}
+
+[role="modal"] [role="dialog"] {
+    position: relative;
+    width: auto;
+}
+
+
+/* ## Special Inputs ## */
+
+.proxy[aria-hidden="true"] {
+    position: absolute; top: 0; left: 0;
+    dispay: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* ### Boolean Checkbox ### */
+
+[role="boolcheck"] {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #bbb;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 0px #777;
+}
+
+    [role="boolcheck"][aria-checked="true"] {
+        background-color: red;
+    }
+
+    [role="boolcheck"].focus {
+        outline: orange auto 1px;
+    }
+
+[role="select"] {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    max-width: 33px;
+    padding-right: 15px;
+}
+
+    [role="select"].hover {
+        border-color: #999;
+    }
+
+    [role="select"] > .option {
+	display: none;
+	text-overflow: clip;
+    }
+
+    [role="select"].initialized > .option, [role="select"] > .option:first-child {
+        display: block;
+    }
+
+    [role="select"].focus {
+        outline: orange auto 1px;
+    }
+
+    .option-modal {
+        position: absolute;
+    }
+
+    .option-modal .modal-overlay {
+	background: none;
+    }
+
+    .option-modal .buttons {
+	display: none;
+    }
+
+    .option-modal .dialog-content {
+	border: 1px solid #bbb;
+	background-color: white;
+	border-radius: 2px;
+	display: inline-block;
+    }
+
+    .option-modal .option {
+	display: block;
+	text-overflow: ellipsis;
+    }
+
+    [role="select"] > .option, .option-modal .option {
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100px;
+	padding: 1px 3px;
+	cursor: default;
+	text-align: left;
+    }
+
+    .option-modal [aria-selected="true"] {
+	background-color: #bbb;
+	color: white;
+    }
